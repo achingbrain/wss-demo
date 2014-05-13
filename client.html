@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo</title>
+    <script>
+      var url = "ws" + (location.protocol == "https:" ? "s" : "");
+      url += "://" + location.hostname + ":" + location.port + "/ws";
+
+      var connection = new WebSocket(url);
+      connection.onmessage = function (event) {
+        document.getElementById('result0').value=event.data;
+      };
+    </script>
+  </head>
+  <body>
+  <p>Result: <output type=text id="result0" value="" readonly> </output></p>
+  <input type=text onkeyup="connection.send(this.value)" onchange="connection.send(this.value)">
+  </body>
+</html>

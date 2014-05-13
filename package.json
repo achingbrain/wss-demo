@@ -1,0 +1,14 @@
+{
+	"name": "wss-demo",
+	"version": "0.0.1",
+	"description": "wss echo server",
+	"private": true,
+	"main": "server.js",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/achingbrain/wss-demo.git"
+	},
+	"dependencies": {
+		"ws": "^0.4"
+	}
+}
